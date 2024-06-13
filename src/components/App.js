@@ -5,6 +5,7 @@ import "../styles/App.css";
 const App = () => {
   const [itmeFilter, setItemFilter] = React.useState("all");
   const handleClickFilterItems = (id) => {
+    id = id.toLowerCase();
     setItemFilter(id);
   };
   let filteredItems;
@@ -16,7 +17,7 @@ const App = () => {
   }
 
   return (
-    <>
+    <div id="main">
       <header>
         <h1>Our Menu</h1>
         <hr />
@@ -24,21 +25,27 @@ const App = () => {
       <main>
         <section className="filter-buttons">
           <ul>
-            <li id="all" onClick={(e) => handleClickFilterItems(e.target.id)}>
+            <li
+              id="filter-btn-1"
+              onClick={(e) => handleClickFilterItems(e.target.innerText)}
+            >
               All
             </li>
             <li
-              id="breakfast"
-              onClick={(e) => handleClickFilterItems(e.target.id)}
+              id="filter-btn-2"
+              onClick={(e) => handleClickFilterItems(e.target.innerText)}
             >
               Breakfast
             </li>
-            <li id="lunch" onClick={(e) => handleClickFilterItems(e.target.id)}>
+            <li
+              id="filter-btn-3"
+              onClick={(e) => handleClickFilterItems(e.target.innerText)}
+            >
               Lunch
             </li>
             <li
-              id="shakes"
-              onClick={(e) => handleClickFilterItems(e.target.id)}
+              id="filter-btn-4"
+              onClick={(e) => handleClickFilterItems(e.target.innerText)}
             >
               Shakes
             </li>
@@ -61,7 +68,7 @@ const App = () => {
           ))}
         </section>
       </main>
-    </>
+    </div>
   );
 };
 
