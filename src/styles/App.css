@@ -1,12 +1,72 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    }
-    
-
-button{
-    color: #27aedb;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
+
+#root{
+    padding-block: 32px;
+    min-height: 100vh;
+    background-color: #f1f5f8;
+}
+header h1{
+    text-align: center;
+}
+h3{
+    text-transform: capitalize;
+}
+header hr {
+    border: none;
+    margin: auto;
+    height: 4px;
+    width: 64px;
+    /* Set the hr color */
+    color:#c59d5f; /* old IE */
+    background-color: #c59d5f;  /* Modern Browsers */
+  }
+.filter-buttons{
+    margin-block:32px;
+}
+
+.filter-buttons ul{
+    width: fit-content;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    gap:32px;
+}
+
+ul li{
+    color: #d2a158;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-itemList{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    gap:50px;
+}
+
+.menu-item{
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap:16px;
+}
+
+.menu-details-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(67, 65, 65);
+    margin-bottom: 12px;
+}
+.menu-details-header p{
+    color:#d2a158;
+}
+
+@media (min-width:999px){
+    .menu-itemList{
+ grid-template-columns: 1fr 1fr;
+    }
+ }
