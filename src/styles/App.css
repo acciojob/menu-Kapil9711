@@ -51,7 +51,7 @@ ul li{
 
 .menu-item{
     display: grid;
-    grid-template-columns: 1fr 1.8fr;
+    grid-template-columns: 1fr 1.4fr;
     gap:16px;
 }
 

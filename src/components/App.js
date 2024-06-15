@@ -52,8 +52,12 @@ const App = () => {
           </ul>
         </section>
         <section className="menu-itemList">
-          {filteredItems.map(({ title, img, price, desc, id }) => (
-            <div key={id} className="menu-item">
+          {filteredItems.map(({ title, img, price, desc, id, category }) => (
+            <div
+              data-test-id={`menu-item-${category}`}
+              key={id}
+              className="menu-item"
+            >
               <div className="menu-image-box">
                 <img src="./images/item-1.jpg" alt={img} />
               </div>
